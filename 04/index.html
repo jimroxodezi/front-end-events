@@ -11,10 +11,14 @@
     <script>
         const obj = {
             init: function() {
+                // this references obj which implements the built-in handleEvent
+                // method, which calls the handler function that handles the 
+                // events.
                 document.querySelector('#btn').addEventListener("click", this);
                 document.querySelector('#btn').addEventListener("focus", this);
             },
 
+            // handleEvent is a built-in javascript method
             handleEvent: function(ev) {
                 switch (ev.type) {
                     case 'click':
