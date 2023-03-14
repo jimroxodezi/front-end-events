@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Button</button>
+    <script>
+        const obj = {
+            init: function() {
+                document.querySelector('#btn').addEventListener("click", this);
+                document.querySelector('#btn').addEventListener("focus", this);
+            },
+
+            handleEvent: function(ev) {
+                switch (ev.type) {
+                    case 'click':
+                        this.handler(ev);
+                        break;
+                
+                    case 'focus':
+                        this.handler(ev);
+                        break;
+                }
+            },
+            handler: function(ev) {
+                console.log(`The button was ${ev.type}ed`);
+            }
+        }
+
+        obj.init();
+    </script>
+</body>
+</html>

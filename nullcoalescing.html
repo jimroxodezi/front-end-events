@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+<body>
+    <script>
+        // let result = null ?? getNum()2
+
+        let current; // = 100;
+
+        function func() {
+            // if current is null or undefined,
+            // result = getNum;
+            result = current ?? getNum();
+            console.log(result);
+        }
+
+        function getNum() {
+            num = Math.floor(Math.random() * 100);
+            return num;
+        }
+
+        func();
+    </script>
+</body>
+</html>
